@@ -121,5 +121,5 @@ src/proxy.ts                    # locale routing در Next.js 16
 
 ```bash
 git remote add origin https://github.com/elaheabdali/
-git push -u origin main https://github.com/elaheabdali/
+git push -u origin main
 ```

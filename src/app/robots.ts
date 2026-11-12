@@ -1,8 +1,12 @@
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
+<<<<<<< HEAD
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || 'https://nova-store.example';
+=======
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nova-store.example';
+>>>>>>> bb75746b6ef26902bb890776ef7773221b969740
   return {
     rules: [{ userAgent: '*', allow: '/' }],
     sitemap: `${baseUrl}/sitemap.xml`,
