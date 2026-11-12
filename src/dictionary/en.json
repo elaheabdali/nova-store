@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "meta": {
     "title": "NOVA | Online Store",
     "description": "Shop smarter and easier with a delightful online shopping experience at NOVA."
@@ -92,7 +91,6 @@
     "brand": "NOVA",
     "close": "Close"
   }
-=======
   "meta": { "title": "NOVA | Online Store", "description": "Shop smarter and easier with a delightful online shopping experience at NOVA." },
   "nav": { "home": "Home", "products": "Products", "categories": "Categories", "cart": "Shopping cart", "search": "Search products...", "language": "فارسی", "theme": "Toggle theme", "menu": "Open menu" },
   "hero": { "eyebrow": "Smart choices, easy shopping", "title": "A better way to shop online", "description": "Find the things you love in just a few clicks and enjoy a simple, seamless shopping experience.", "cta": "Explore products", "note": "Thoughtful picks for everyday life" },
@@ -100,5 +98,4 @@
   "cart": { "title": "Your shopping cart", "subtitle": "Review your selected items and update quantities.", "emptyTitle": "Your cart is empty", "emptyText": "You haven't added anything yet. Find something you'll love!", "continue": "Continue shopping", "product": "Product", "unitPrice": "Unit price", "quantity": "Quantity", "total": "Total", "summary": "Order summary", "subtotal": "Subtotal", "shipping": "Shipping", "free": "Free", "grandTotal": "Grand total", "clear": "Clear cart", "remove": "Remove item", "decrease": "Decrease quantity", "increase": "Increase quantity", "disclaimer": "This demo does not include checkout or online payments.", "items": "items" },
   "footer": { "about": "A store for smart choices and a simple, delightful shopping experience.", "quick": "Quick links", "support": "Customer support", "contact": "Contact us", "shipping": "Shipping", "returns": "Returns", "faq": "FAQs", "rights": "All rights reserved.", "tagline": "Thoughtful choices, delightful shopping", "newsletter": "Get the latest offers", "email": "Your email address", "subscribe": "Subscribe", "socialInstagram": "Instagram", "socialLinkedIn": "LinkedIn", "socialTelegram": "Telegram" },
   "common": { "currency": "USD", "themeLight": "Light mode", "themeDark": "Dark mode", "brand": "NOVA", "close": "Close" }
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 }

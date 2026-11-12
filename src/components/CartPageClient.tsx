@@ -1,6 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
 import {
   ArrowLeft,
   ArrowRight,
@@ -17,19 +16,16 @@ import {
   selectCartCount,
   selectCartTotal,
 } from '@/storage/cartStore';
-=======
 import { ArrowLeft, ArrowRight, Minus, Plus, ShoppingBag, Trash2 } from 'lucide-react';
 import styled from 'styled-components';
 import { Link } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { useCartStore, selectCartCount, selectCartTotal } from '@/storage/cartStore';
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { formatPrice } from '@/utils/formatPrice';
 import { Button, SecondaryButton } from '@/shared/StoreButtons';
 
-<<<<<<< HEAD
 const Main = styled.main`
   padding: 52px 0 80px;
   min-height: 55vh;
@@ -358,7 +354,6 @@ export function CartPageClient() {
       <Footer />
     </>
   );
-=======
 const Main = styled.main`padding:52px 0 80px;min-height:55vh;`;
 const Heading = styled.div`margin-bottom:28px;h1{font-size:clamp(25px,3vw,34px);margin:0 0 9px;color:${({theme})=>theme.colors.navy}}p{margin:0;color:${({theme})=>theme.colors.muted};font-size:13px;line-height:1.9}`;
 const Layout = styled.div`display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:24px;align-items:start;@media(max-width:850px){grid-template-columns:1fr}`;
@@ -391,5 +386,4 @@ export function CartPageClient() {
       <Summary><h2>{t('summary')}</h2><div className="line"><span>{t('items')} ({count})</span><span>{formatPrice(total,locale)}</span></div><div className="line"><span>{t('shipping')}</span><span>{t('free')}</span></div><div className="line grand"><span>{t('grandTotal')}</span><span>{formatPrice(total,locale)}</span></div><Link href="/"><Button style={{width:'100%',marginTop:12}}><BackIcon size={15}/>{t('continue')}</Button></Link><p className="note">{t('disclaimer')}</p></Summary></Layout>
     </>}
   </Main><Footer/></>;
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 }

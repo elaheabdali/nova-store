@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
 import {
   Check,
   ChevronLeft,
@@ -11,9 +10,7 @@ import {
   SlidersHorizontal,
   Star,
 } from 'lucide-react';
-=======
 import { Check, ChevronLeft, ChevronRight, Plus, Search, SlidersHorizontal, Star } from 'lucide-react';
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 import styled from 'styled-components';
 import { useLocale, useTranslations } from 'next-intl';
 import type { Product } from '@/types';
@@ -23,7 +20,6 @@ import { useCartStore } from '@/storage/cartStore';
 import { formatPrice } from '@/utils/formatPrice';
 import { Button } from '@/shared/StoreButtons';
 
-<<<<<<< HEAD
 const Section = styled.section`
   padding: 74px 0 82px;
   scroll-margin-top: 90px;
@@ -326,7 +322,6 @@ const Pager = styled.div`
 function prettyCategory(value: string) {
   return value.replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
-=======
 const Section = styled.section`padding:74px 0 82px;scroll-margin-top:90px;`;
 const SectionTop = styled.div`display:flex;align-items:flex-end;justify-content:space-between;gap:25px;margin-bottom:25px;.eyebrow{font-size:11px;color:${({theme})=>theme.colors.orange};font-weight:900;letter-spacing:1px;margin-bottom:9px}.title{font-size:clamp(24px,3vw,32px);font-weight:900;margin:0 0 10px;color:${({theme})=>theme.colors.navy}}.desc{font-size:13px;color:${({theme})=>theme.colors.muted};margin:0;line-height:1.8}`;
 const CategoryRow = styled.div`display:flex;gap:9px;overflow:auto;padding:3px 1px 17px;scrollbar-width:thin;`;
@@ -348,7 +343,6 @@ const State = styled.div`min-height:250px;display:grid;place-content:center;text
 const Pager = styled.div`display:flex;align-items:center;justify-content:center;gap:8px;margin-top:30px;button{min-width:37px;height:37px;border:1px solid ${({theme})=>theme.colors.border};background:${({theme})=>theme.colors.surface};color:${({theme})=>theme.colors.text};border-radius:9px;font-size:12px}.active{background:${({theme})=>theme.colors.navy};color:white;border-color:${({theme})=>theme.colors.navy}}button:disabled{opacity:.35;cursor:not-allowed}`;
 
 function prettyCategory(value: string) { return value.replace(/\b\w/g, (letter) => letter.toUpperCase()); }
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 
 export function ProductGrid({ searchValue }: { searchValue: string }) {
   const t = useTranslations('catalog');
@@ -365,7 +359,6 @@ export function ProductGrid({ searchValue }: { searchValue: string }) {
   const pageSize = 6;
 
   const loadProducts = async () => {
-<<<<<<< HEAD
     setLoading(true);
     setError(false);
     try {
@@ -411,7 +404,6 @@ export function ProductGrid({ searchValue }: { searchValue: string }) {
         break;
       default:
         break;
-=======
     setLoading(true); setError(false);
     try {
       const data = await productRequests.getAll();
@@ -436,12 +428,10 @@ export function ProductGrid({ searchValue }: { searchValue: string }) {
       case ProductSort.TitleAscending: result.sort((a,b)=>a.title.localeCompare(b.title)); break;
       case ProductSort.TitleDescending: result.sort((a,b)=>b.title.localeCompare(a.title)); break;
       default: break;
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
     }
     return result;
   }, [products, category, searchValue, sort]);
   const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize));
-<<<<<<< HEAD
   const visibleProducts = filtered.slice(
     (page - 1) * pageSize,
     page * pageSize,
@@ -452,11 +442,9 @@ export function ProductGrid({ searchValue }: { searchValue: string }) {
   useEffect(() => {
     if (page > pageCount) setPage(pageCount);
   }, [page, pageCount]);
-=======
   const visibleProducts = filtered.slice((page - 1) * pageSize, page * pageSize);
   useEffect(() => { setPage(1); }, [category, searchValue, sort]);
   useEffect(() => { if (page > pageCount) setPage(pageCount); }, [page, pageCount]);
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 
   const handleAdd = (product: Product) => {
     addItem(product);
@@ -464,7 +452,6 @@ export function ProductGrid({ searchValue }: { searchValue: string }) {
     window.setTimeout(() => setNotice(''), 2200);
   };
 
-<<<<<<< HEAD
   return (
     <Section id="products">
       <div className="container">
@@ -617,7 +604,6 @@ export function ProductGrid({ searchValue }: { searchValue: string }) {
       </div>
     </Section>
   );
-=======
   return <Section id="products"><div className="container">
     <SectionTop><div><div className="eyebrow">{t('eyebrow')}</div><h2 className="title">{t('title')}</h2><p className="desc">{t('description')}</p></div><div style={{fontSize:12,color:'var(--page-text)',fontWeight:800}}>{products.length ? `${products.length} ${t('showing')}` : ''}</div></SectionTop>
     <div id="categories"><CategoryRow><CategoryChip $active={category==='all'} onClick={()=>setCategory('all')}>{t('all')}</CategoryChip>{categories.map((item)=><CategoryChip key={item} $active={category===item} onClick={()=>setCategory(item)}>{prettyCategory(item)}</CategoryChip>)}</CategoryRow></div>
@@ -631,5 +617,4 @@ export function ProductGrid({ searchValue }: { searchValue: string }) {
     </Grid>}
     {!loading&&!error&&filtered.length>0&&<Pager><button type="button" aria-label={t('previous')} disabled={page===1} onClick={()=>setPage(v=>Math.max(1,v-1))}>{locale==='fa'?<ChevronRight size={17}/>:<ChevronLeft size={17}/>}</button>{Array.from({length:pageCount},(_,index)=>index+1).map(number=><button type="button" key={number} className={number===page?'active':''} onClick={()=>setPage(number)}>{number}</button>)}<button type="button" aria-label={t('next')} disabled={page===pageCount} onClick={()=>setPage(v=>Math.min(pageCount,v+1))}>{locale==='fa'?<ChevronLeft size={17}/>:<ChevronRight size={17}/>}</button></Pager>}
   </div></Section>;
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 }

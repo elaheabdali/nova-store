@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import { useLocale, useTranslations } from 'next-intl';
 import { Button } from '@/shared/StoreButtons';
 
-<<<<<<< HEAD
 const Banner = styled.section`
   padding: 30px 0 0;
 `;
@@ -169,7 +168,6 @@ export function Hero() {
       </div>
     </Banner>
   );
-=======
 const Banner = styled.section`padding:30px 0 0;`;
 const Surface = styled.div`min-height:380px;position:relative;overflow:hidden;border-radius:26px;background:linear-gradient(115deg,#f4e9df 0%,#f6efe9 48%,#e5e3e2 100%);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;padding:45px 6%;isolation:isolate;@media(max-width:740px){grid-template-columns:1fr;min-height:auto;padding:36px 25px 25px;gap:20px}`;
 const Copy = styled.div`position:relative;z-index:2;max-width:510px;direction:inherit;.eyebrow{display:inline-flex;align-items:center;gap:7px;color:#dd672e;background:#fff8f3;border:1px solid #f4d5c3;border-radius:99px;padding:8px 13px;font-size:11px;font-weight:900;margin-bottom:20px}.note{font-size:12px;color:#596577;margin-top:20px}h1{font-size:clamp(29px,4vw,45px);line-height:1.5;letter-spacing:-1.2px;color:#14243c;margin:0 0 12px;font-weight:950}p{color:#5b6575;font-size:14px;line-height:2;margin:0 0 23px}`;
@@ -181,5 +179,4 @@ export function Hero() {
     <Copy><div className="eyebrow"><Sparkles size={14}/>{t('eyebrow')}</div><h1>{t('title')}</h1><p>{t('description')}</p><a href="#products"><Button>{t('cta')}{locale==='fa'?<ArrowUpLeft size={17}/>:<ArrowUpRight size={17}/>}</Button></a><div className="note">✦ {t('note')}</div></Copy>
     <Visual aria-hidden="true"><div className="halo"/><img className="item headphones" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700&auto=format&fit=crop&q=85" alt=""/><img className="item watch" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=85" alt=""/><img className="item shoe" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=85" alt=""/></Visual>
   </Surface></div></Banner>;
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 }

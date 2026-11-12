@@ -8,7 +8,6 @@ import { Footer } from './Footer';
 
 export function StorefrontExperience() {
   const [searchValue, setSearchValue] = useState('');
-<<<<<<< HEAD
   return (
     <>
       <Header searchValue={searchValue} onSearchChange={setSearchValue} />
@@ -19,7 +18,5 @@ export function StorefrontExperience() {
       <Footer />
     </>
   );
-=======
   return <><Header searchValue={searchValue} onSearchChange={setSearchValue}/><main><Hero/><ProductGrid searchValue={searchValue}/></main><Footer/></>;
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 }

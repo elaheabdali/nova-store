@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap');
-<<<<<<< HEAD
 :root {
   color-scheme: light;
 }
@@ -69,7 +68,6 @@ img {
     width: min(100% - 30px, 1200px);
   }
 }
-=======
 :root { color-scheme: light; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -86,4 +84,3 @@ img { max-width: 100%; }
 :root[data-theme='dark'] { --page-bg:#0d1524; --page-text:#eff3fa; color-scheme:dark; }
 .container { width:min(1200px, calc(100% - 48px)); margin-inline:auto; }
 @media(max-width:640px){.container{width:min(100% - 30px, 1200px)}}
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740

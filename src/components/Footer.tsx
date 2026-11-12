@@ -5,7 +5,6 @@ import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { Instagram, Linkedin, Send, ShoppingBag } from 'lucide-react';
 
-<<<<<<< HEAD
 const FooterSurface = styled.footer`
   margin-top: 35px;
   background: ${({ theme }) => theme.colors.footer};
@@ -139,7 +138,6 @@ export function Footer() {
       </div>
     </FooterSurface>
   );
-=======
 const FooterSurface = styled.footer`margin-top:35px;background:${({theme})=>theme.colors.footer};color:#f5f7fc;padding:55px 0 22px;`;
 const Grid = styled.div`display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:35px;padding-bottom:40px;@media(max-width:760px){grid-template-columns:1fr 1fr;gap:28px}@media(max-width:480px){grid-template-columns:1fr 1fr;gap:24px}`;
 const Brand = styled.div`font-size:25px;font-weight:950;display:flex;gap:9px;align-items:center;margin-bottom:14px;.bag{color:#ff814b}p{font-size:12px;line-height:2;color:#aab7c8;font-weight:400;max-width:290px}`;
@@ -155,5 +153,4 @@ export function Footer() {
     <Column><h4>{t('support')}</h4><a href="#">{t('shipping')}</a><a href="#">{t('returns')}</a><a href="#">{t('faq')}</a></Column>
     <Column><h4>{t('contact')}</h4><a href="mailto:hello@nova.example">hello@nova.example</a><a href="tel:+10000000000">+1 000 000 0000</a></Column>
   </Grid><Bottom><span>© {new Date().getFullYear()} NOVA. {t('rights')}</span><span>{t('tagline')}</span></Bottom></div></FooterSurface>;
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 }

@@ -2,13 +2,11 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
-<<<<<<< HEAD
 import {
   getMessages,
   getTranslations,
   setRequestLocale,
 } from 'next-intl/server';
-=======
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 >>>>>>> bb75746b6ef26902bb890776ef7773221b969740
 import { routing } from '@/i18n/routing';
@@ -21,7 +19,6 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-<<<<<<< HEAD
 export async function generateMetadata({
   params,
 }: {
@@ -31,17 +28,14 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'meta' });
   const siteUrl =
     process.env.NEXT_PUBLIC_SITE_URL || 'https://nova-store.example';
-=======
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://nova-store.example';
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
   return {
     metadataBase: new URL(siteUrl),
     title: t('title'),
     description: t('description'),
-<<<<<<< HEAD
     openGraph: {
       title: t('title'),
       description: t('description'),
@@ -60,14 +54,12 @@ export default async function LocaleLayout({
   children,
   params,
 }: Readonly<{ children: ReactNode; params: Promise<{ locale: string }> }>) {
-=======
     openGraph: { title: t('title'), description: t('description'), siteName: 'NOVA', type: 'website', locale },
     alternates: { canonical: `/${locale}`, languages: { fa: '/fa', en: '/en' } },
   };
 }
 
 export default async function LocaleLayout({ children, params }: Readonly<{ children: ReactNode; params: Promise<{ locale: string }> }>) {
->>>>>>> bb75746b6ef26902bb890776ef7773221b969740
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) notFound();
   setRequestLocale(locale);
